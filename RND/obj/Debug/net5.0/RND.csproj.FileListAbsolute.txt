@@ -1,0 +1,15 @@
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\RND.deps.json
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\RND.runtimeconfig.json
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\RND.runtimeconfig.dev.json
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\RND.dll
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\ref\RND.dll
+C:\Users\shifa\source\repos\CustomerManagement\RND\bin\Debug\net5.0\RND.pdb
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.csproj.AssemblyReference.cache
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfoInputs.cache
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfo.cs
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.csproj.CoreCompileInputs.cache
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.dll
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\ref\RND.dll
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.pdb
+C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.genruntimeconfig.cache

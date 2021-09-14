@@ -1,0 +1,5 @@
+ Scaffold-DbContext "Server=DESKTOP-EA380EP\\SQLEXPRESS; Database=CustomerManagementDb; Trusted_connection=True"
+ Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+ Scaffold-DbContext "Server=DESKTOP-EA380EP\SQLEXPRESS;Database=CustomerManagementDbNotDelete;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
