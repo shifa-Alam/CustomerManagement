@@ -13,3 +13,18 @@ C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.dll
 C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\ref\RND.dll
 C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.pdb
 C:\Users\shifa\source\repos\CustomerManagement\RND\obj\Debug\net5.0\RND.genruntimeconfig.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\RND.deps.json
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\RND.runtimeconfig.json
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\RND.runtimeconfig.dev.json
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\RND.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\ref\RND.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\bin\Debug\net5.0\RND.pdb
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.csprojAssemblyReference.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfoInputs.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfo.cs
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\ref\RND.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.pdb
+C:\Users\test\Desktop\Angular Project\CustomerManagement\RND\obj\Debug\net5.0\RND.genruntimeconfig.cache

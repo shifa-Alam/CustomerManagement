@@ -16,6 +16,7 @@ namespace WebAPI
 {
     public class Startup
     {
+       
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,7 +28,19 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+
+
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                    });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
@@ -44,9 +57,12 @@ namespace WebAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
 
+
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 

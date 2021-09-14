@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\DAL.csproj": {
+    "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\shifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\shifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\shifa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\shifa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\shifa\\source\\repos\\CustomerManagement\\DAL\\DAL.csproj"
+              "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\test\\Desktop\\Angular Project\\CustomerManagement\\DAL\\DAL.csproj"
               }
             }
           }
@@ -120,6 +120,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -143,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
