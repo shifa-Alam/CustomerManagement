@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DAL
 {
-    public partial class Customer
+    public class Customer
     {
         public Customer()
         {

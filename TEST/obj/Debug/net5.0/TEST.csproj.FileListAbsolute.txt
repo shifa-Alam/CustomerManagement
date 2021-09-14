@@ -1,0 +1,17 @@
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\TEST.deps.json
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\TEST.dll
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\ref\TEST.dll
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\TEST.pdb
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\BAL.dll
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\DAL.dll
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\BAL.pdb
+D:\dotNetProject\CustomerManagement\TEST\bin\Debug\net5.0\DAL.pdb
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.csproj.AssemblyReference.cache
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.AssemblyInfoInputs.cache
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.AssemblyInfo.cs
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.csproj.CoreCompileInputs.cache
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.csproj.CopyComplete
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.dll
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\ref\TEST.dll
+D:\dotNetProject\CustomerManagement\TEST\obj\Debug\net5.0\TEST.pdb

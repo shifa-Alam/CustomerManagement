@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace DAL
+namespace RND.Models
 {
-    public partial class CustomerManagementDbContext : DbContext
+    public partial class CustomerManagementDbNotDeleteContext : DbContext
     {
-        public CustomerManagementDbContext()
+        public CustomerManagementDbNotDeleteContext()
         {
         }
 
-        public CustomerManagementDbContext(DbContextOptions<CustomerManagementDbContext> options)
+        public CustomerManagementDbNotDeleteContext(DbContextOptions<CustomerManagementDbNotDeleteContext> options)
             : base(options)
         {
         }
@@ -25,8 +25,8 @@ namespace DAL
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-EA380EP\\SQLEXPRESS;Database=CustomerManagementDb;Trusted_Connection=True;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=DESKTOP-EA380EP\\SQLEXPRESS;Database=CustomerManagementDbNotDelete;Trusted_Connection=True;");
             }
         }
 
@@ -66,9 +66,7 @@ namespace DAL
             {
                 entity.ToTable("CustomerAddress");
 
-                entity.Property(e => e.CustomerAddress1)
-                    .HasMaxLength(500)
-                    .HasColumnName("CustomerAddress");
+                entity.Property(e => e.Address).HasMaxLength(500);
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.CustomerAddresses)

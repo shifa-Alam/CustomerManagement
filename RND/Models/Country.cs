@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace RND.del
+namespace RND.Models
 {
     public partial class Country
     {

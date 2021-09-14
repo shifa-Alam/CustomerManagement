@@ -7,41 +7,70 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
+using BAL;
+using Microsoft.AspNetCore.Http;
 
 namespace WebAPI.Controllers
 {
-   
-   
+
+
     [ApiController]
-    [Route("[controller]")]
-    
+    [Route("api/[controller]")]
+
     public class CustomerController : ControllerBase
     {
-        
-        [HttpGet]
-        public IEnumerable<Customer> Get()
+        private readonly ICustomerService _customerService;
+
+        public CustomerController(ICustomerService customerService)
         {
-           //using(var contect = new CustomerManagementDbContext())
-           // {
-           //     //get all customers
-           //     return contect.Customers.ToList();
-           // }
-           
-           List<Customer> customers= new List<Customer>();
-           for (int i = 1; i < 10; i++)
-           {
-               Customer customer = new Customer
-               {
-                   Id = i+1,
-                   CustomerName = $"shifa {i}",
-                   FatherName = $"zakir {i}",
-                   MaritalStatus = 2
+            _customerService = customerService;
+        }
 
-               };
-               customers.Add(customer);
+        [HttpPost]
+        public async Task<ActionResult<Customer>> SaveCustomerAsync(Customer customer)
+        {
+            try
+            {
+                var result = await _customerService.SaveAsync(customer);
+
+                return Ok();
             }
+            catch (Exception)
+            {
 
-           return customers;
+                throw;
+            }
+        }
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Customer>> FindCustomerByIdAsync(int id)
+        {
+            try
+            {
+                var result = await _customerService.FindByIdAsync(id);
+                if (result == null) return NotFound();
+                return result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCustomers()
+        {
+
+
+            try
+            {
+                return Ok(await _customerService.GetAsyc());
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error Retrieving Data from Database");
+            }
 
         }
     }

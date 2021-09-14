@@ -28,3 +28,18 @@ C:\Users\test\Desktop\Angular Project\CustomerManagement\DAL\obj\Debug\net5.0\DA
 C:\Users\test\Desktop\Angular Project\CustomerManagement\DAL\obj\Debug\net5.0\ref\DAL.dll
 C:\Users\test\Desktop\Angular Project\CustomerManagement\DAL\obj\Debug\net5.0\DAL.pdb
 C:\Users\test\Desktop\Angular Project\CustomerManagement\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.deps.json
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.runtimeconfig.json
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.runtimeconfig.dev.json
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.dll
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\ref\DAL.dll
+D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.pdb
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.dll
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\ref\DAL.dll
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.pdb
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache

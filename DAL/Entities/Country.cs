@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DAL
 {
-    public partial class Country
+    public class Country
     {
         public Country()
         {
