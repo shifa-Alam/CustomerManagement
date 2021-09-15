@@ -16,6 +16,11 @@ namespace TEST
 
         private ICountryService _countryService;
 
+        public CountryUnitTest(ICountryService countryService)
+        {
+            _countryService = countryService;
+        }
+
         [TestMethod]
         public async Task SaveCountryAsync()
         {

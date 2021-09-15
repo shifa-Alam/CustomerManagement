@@ -25,3 +25,18 @@ D:\dotNetProject\CustomerManagement\BAL\obj\Debug\net5.0\BAL.pdb
 D:\dotNetProject\CustomerManagement\BAL\bin\Debug\net5.0\DAL.dll
 D:\dotNetProject\CustomerManagement\BAL\bin\Debug\net5.0\DAL.pdb
 D:\dotNetProject\CustomerManagement\BAL\obj\Debug\net5.0\BAL.csproj.CopyComplete
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\BAL.deps.json
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\BAL.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\ref\BAL.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\BAL.pdb
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\DAL.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\bin\Debug\net5.0\DAL.pdb
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.csprojAssemblyReference.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.AssemblyInfoInputs.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.AssemblyInfo.cs
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.csproj.CopyComplete
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\ref\BAL.dll
+C:\Users\test\Desktop\Angular Project\CustomerManagement\BAL\obj\Debug\net5.0\BAL.pdb
