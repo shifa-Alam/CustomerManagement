@@ -11,12 +11,12 @@ namespace BAL
    public  class CustomerService : ICustomerService
     {
         private readonly AppDbContext _appDbContext;
-        private readonly ICustomerAddressService _customerAddressService;
+        //private readonly ICustomerAddressService _customerAddressService;
 
-        public CustomerService(AppDbContext appDbContext, ICustomerAddressService customerAddressService)
+        public CustomerService(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext ?? throw new ArgumentNullException(nameof(appDbContext));
-            _customerAddressService = customerAddressService ?? throw new ArgumentNullException(nameof(customerAddressService));
+            //_customerAddressService = customerAddressService ?? throw new ArgumentNullException(nameof(customerAddressService));
         }
 
         public async Task<Customer> SaveAsync(Customer entity)
@@ -104,7 +104,7 @@ namespace BAL
             {
                 if (id <= 0) throw new ArgumentNullException(nameof(id));
 
-                var result = await _appDbContext.Customers.Include(c => c.Country).FirstOrDefaultAsync(c => c.Id == id);
+                var result = await _appDbContext.Customers.Include(c => c.CustomerAddresses).Include(c => c.Country).FirstOrDefaultAsync(c => c.Id == id);
                 if (result == null)
                 {
                     throw new Exception($"Customer not Found with id= {id}");
@@ -122,7 +122,7 @@ namespace BAL
         {
             try
             {
-                return await _appDbContext.Customers.ToListAsync();
+                return await _appDbContext.Customers.Include(a => a.CustomerAddresses).Include(a=>a.Country).ToListAsync();
             }
             catch (Exception)
             {

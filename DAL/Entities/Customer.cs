@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace DAL
+namespace DAL 
 {
-    public class Customer
+    public partial class Customer
     {
         public Customer()
         {

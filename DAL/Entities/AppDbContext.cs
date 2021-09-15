@@ -25,8 +25,8 @@ namespace DAL
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-EA380EP\\SQLEXPRESS;Database=CustomerManagementDbNotDelete;Trusted_Connection=True;");
+                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=DESKTOP-EA380EP\\SQLEXPRESS;Database=CustomerManagement;Trusted_Connection=True;");
             }
         }
 
@@ -36,8 +36,6 @@ namespace DAL
 
             modelBuilder.Entity<Country>(entity =>
             {
-                entity.ToTable("Country");
-
                 entity.Property(e => e.CountryName)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -45,8 +43,6 @@ namespace DAL
 
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.ToTable("Customer");
-
                 entity.Property(e => e.CustomerName)
                     .IsRequired()
                     .HasMaxLength(100);
@@ -64,8 +60,6 @@ namespace DAL
 
             modelBuilder.Entity<CustomerAddress>(entity =>
             {
-                entity.ToTable("CustomerAddress");
-
                 entity.Property(e => e.Address).HasMaxLength(500);
 
                 entity.HasOne(d => d.Customer)

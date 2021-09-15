@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DAL
 {
-    public class CustomerAddress
+    public partial class CustomerAddress
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }

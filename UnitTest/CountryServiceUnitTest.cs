@@ -11,13 +11,16 @@ using System.Threading.Tasks;
 namespace UnitTest
 {
     [TestClass]
-    public class CountryUnitTest
+    public class CountryServiceUnitTest
     {
 
         private readonly ICountryService _countryService;
 
-        
-
+        public CountryServiceUnitTest()
+        {
+            AppDbContext dbContext = new AppDbContext();
+            _countryService = new CountryService(dbContext);
+        }
 
         [TestMethod]
         public async Task SaveCountryAsync()
@@ -26,9 +29,9 @@ namespace UnitTest
             {
                 List<Country> countries = new List<Country>
                 {
-                    new Country {CountryName = "Bangladesh"},
-                    new Country {CountryName = "Germany"},
-                    new Country {CountryName = "India"}
+                    new Country {CountryName = "Japan"},
+                    new Country {CountryName = "USA"},
+                    new Country {CountryName = "UK"}
                 };
                 foreach (var country in countries)
                 {
