@@ -47,7 +47,9 @@ namespace WebAPI
 
                     builder =>
                     {
+                        builder.AllowAnyHeader();
                         builder.AllowAnyOrigin();
+                        builder.AllowAnyMethod();
                     });
             });
 
@@ -66,7 +68,7 @@ namespace WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
-
+           
 
 
             app.UseHttpsRedirection();
@@ -75,7 +77,7 @@ namespace WebAPI
             app.UseCors();
 
             app.UseAuthorization();
-
+        
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

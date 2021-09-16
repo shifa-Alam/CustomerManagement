@@ -27,6 +27,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+         [IgnoreAntiforgeryToken]
         public async Task<ActionResult<Customer>> SaveCustomerAsync(Customer customer)
         {
             try
