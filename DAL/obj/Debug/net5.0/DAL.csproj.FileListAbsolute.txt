@@ -42,3 +42,4 @@ D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.dll
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\ref\DAL.dll
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.pdb
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache
+D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache

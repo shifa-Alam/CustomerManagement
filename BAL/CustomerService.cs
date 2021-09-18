@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BAL
 {
-   public  class CustomerService : ICustomerService
+    public class CustomerService : ICustomerService
     {
         private readonly AppDbContext _appDbContext;
         private readonly ICustomerAddressService _customerAddressService;
@@ -127,7 +127,7 @@ namespace BAL
         {
             try
             {
-                return await _appDbContext.Customers.Include(a => a.CustomerAddresses).Include(a=>a.Country).ToListAsync();
+                return await _appDbContext.Customers.Include(a => a.CustomerAddresses).Include(a => a.Country).ToListAsync();
             }
             catch (Exception)
             {
@@ -136,6 +136,29 @@ namespace BAL
             }
         }
 
+        public async Task<Customer> UploadPhotoAsync(Customer entity)
+        {
+            try
+            {
+                if (entity is null) throw new ArgumentNullException(nameof(entity));
+                var existingEntity = await _appDbContext.Customers.FindAsync(entity.Id);
+                if (existingEntity is null) throw new Exception("Customer Not Found!");
+
+                existingEntity.CustomerPhoto = entity.CustomerPhoto;
+
+                ApplyCustomerIdBl(existingEntity);
+
+                // chain effect
+
+                var result = await _appDbContext.SaveChangesAsync();
+                return existingEntity;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
         #region Business Logic
@@ -176,6 +199,7 @@ namespace BAL
             }
         }
 
+     
         #endregion
     }
 }

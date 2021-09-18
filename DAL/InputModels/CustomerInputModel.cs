@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -18,6 +19,7 @@ namespace DAL
         public string FatherName { get; set; }
         public string MotherName { get; set; }
         public int? MaritalStatus { get; set; }
+        public IFormFile File { get; set; }
         public byte[] CustomerPhoto { get; set; }
 
         public IList<CustomerAddressInputModel> CustomerAddresses { get; set; }

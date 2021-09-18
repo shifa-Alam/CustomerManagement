@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using AutoMapper;
 using BAL;
+using System.IO;
 
 namespace WebAPI.Controllers
 {
@@ -110,13 +111,52 @@ namespace WebAPI.Controllers
             }
 
         }
+
+
+        #endregion
+
+
+        [HttpPost("Upload")]
+        [Consumes("multipart/form-data")]
+        public async  Task<ActionResult<Customer>> Upload([FromForm] FileModel file)
+        {
+            try
+            {
+                var customerPhote = file.MyFile;
+                var custommerId = file.CustomerId;
+
+                var customer = new Customer();
+
+                if (customerPhote.Length > 0)
+                {
+                    byte[] fileBytes;
+
+                    using (var ms = new MemoryStream())
+                    {
+                        customerPhote.CopyTo(ms);
+                        fileBytes = ms.ToArray();
+                        string s = Convert.ToBase64String(fileBytes);
+                        // act on the Base64 data
+                    }
+
+                    customer.Id = Convert.ToInt32(custommerId);
+                    customer.CustomerPhoto = fileBytes;
+                }
+
+
+                var result = await CustomerService.UploadPhotoAsync(customer);
+
+                return Ok(result);
+
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+        }
     }
-    #endregion
-
-
-
-    
 
 
 }
-    
+

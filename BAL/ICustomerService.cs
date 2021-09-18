@@ -14,6 +14,7 @@ namespace BAL
         Task DeleteAsync(int id);
         Task<Customer> FindByIdAsync(int id);
         Task<IEnumerable<Customer>> GetAsyc();
+        Task<Customer>  UploadPhotoAsync(Customer entity);
 
 
     }
