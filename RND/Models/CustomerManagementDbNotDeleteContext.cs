@@ -54,7 +54,7 @@ namespace RND.Models
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Customers)
                     .HasForeignKey(d => d.CountryId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Customer_Country");
             });
 
@@ -65,7 +65,7 @@ namespace RND.Models
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.CustomerAddresses)
                     .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_CustomerAddress_Customer");
             });
 

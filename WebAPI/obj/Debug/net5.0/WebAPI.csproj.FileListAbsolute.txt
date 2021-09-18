@@ -188,3 +188,4 @@ D:\dotNetProject\CustomerManagement\WebAPI\bin\Debug\net5.0\BAL.pdb
 D:\dotNetProject\CustomerManagement\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\dotNetProject\CustomerManagement\WebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\dotNetProject\CustomerManagement\WebAPI\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\dotNetProject\CustomerManagement\WebAPI\bin\Debug\net5.0\AutoMapper.dll

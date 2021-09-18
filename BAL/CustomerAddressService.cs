@@ -18,6 +18,10 @@ namespace BAL
             _appDbContext = appDbContext ?? throw new ArgumentNullException(nameof(appDbContext));
             }
 
+        public CustomerAddressService()
+        {
+        }
+
         public async Task<CustomerAddress> SaveAsync(CustomerAddress entity)
         {
 
@@ -25,6 +29,7 @@ namespace BAL
             {
                 if (entity is null) throw new ArgumentNullException(nameof(entity));
 
+                ApplyCustomerIdBl(entity);
                 ApplyValidationBl(entity);
 
                 var result = await _appDbContext.CustomerAddresses.AddAsync(entity);
@@ -44,12 +49,12 @@ namespace BAL
             try
             {
                 if (entity is null) throw new ArgumentNullException(nameof(entity));
-                var existingEntity = await _appDbContext.Countries.FindAsync(entity.Id);
+                var existingEntity =  _appDbContext.CustomerAddresses.Find(entity.Id);
                 if (existingEntity is null) throw new Exception("CustomerAddress Not Found!");
 
-                //existingEntity.CustomerAddressName = entity.CustomerAddressName;
-                //ApplyCustomerAddressIdBl(existingEntity);
-                //ApplyValidationBl(existingEntity);
+                existingEntity.Address = entity.Address;
+                ApplyCustomerAddressIdBl(existingEntity);
+                ApplyValidationBl(existingEntity);
 
                 // chain effect
 
@@ -74,10 +79,10 @@ namespace BAL
             {
                 if (id <= 0) throw new ArgumentNullException(nameof(id));
 
-                var result = _appDbContext.Countries.FirstOrDefault(c => c.Id == id);
+                var result = _appDbContext.CustomerAddresses.FirstOrDefault(c => c.Id == id);
                 if (result != null)
                 {
-                    _appDbContext.Countries.Remove(result);
+                    _appDbContext.CustomerAddresses.Remove(result);
                     await _appDbContext.SaveChangesAsync();
                 }
 
@@ -134,9 +139,9 @@ namespace BAL
             try
             {
                 if (entity is null) throw new ArgumentNullException(nameof(entity));
-              
-                //entity.CustomerAddressName = string.IsNullOrWhiteSpace(entity.CustomerAddressName) ? throw new Exception("Name is Required") : entity.CustomerAddressName.Trim();
-              
+
+                entity.Address = string.IsNullOrWhiteSpace(entity.Address) ? throw new Exception("Address is Required") : entity.Address.Trim();
+
             }
             catch (Exception)
             {
@@ -144,6 +149,21 @@ namespace BAL
                 throw;
             }
         }
+        private void ApplyCustomerIdBl(CustomerAddress entity)
+        {
+
+            try
+            {
+                if (entity is null) throw new ArgumentNullException(nameof(entity));
+                if (entity.CustomerId <= 0) throw new Exception("Customer Id Required");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
         private void ApplyCustomerAddressIdBl(CustomerAddress entity)
         {
@@ -161,6 +181,7 @@ namespace BAL
             }
         }
 
+       
         #endregion
     }
 }

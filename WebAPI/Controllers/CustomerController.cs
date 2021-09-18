@@ -7,8 +7,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
-using BAL;
+
 using Microsoft.AspNetCore.Http;
+using AutoMapper;
+using BAL;
 
 namespace WebAPI.Controllers
 {
@@ -19,22 +21,25 @@ namespace WebAPI.Controllers
 
     public class CustomerController : ControllerBase
     {
-        private readonly ICustomerService _customerService;
+        private readonly ICustomerService CustomerService;
+        private readonly IMapper Mapper;
 
-        public CustomerController(ICustomerService customerService)
+        public CustomerController(ICustomerService customerService, IMapper mapper)
         {
-            _customerService = customerService;
+            CustomerService = customerService;
+            Mapper = mapper;
         }
 
+        #region  customer
         [HttpPost]
-         [IgnoreAntiforgeryToken]
-        public async Task<ActionResult<Customer>> SaveCustomerAsync(Customer customer)
+
+        public async Task SaveCustomerAsync([FromBody] CustomerInputModel model)
         {
             try
             {
-                var result = await _customerService.SaveAsync(customer);
+                var result = await CustomerService.SaveAsync(Mapper.Map<Customer>(model));
 
-                return Ok();
+                Ok();
             }
             catch (Exception)
             {
@@ -42,12 +47,45 @@ namespace WebAPI.Controllers
                 throw;
             }
         }
+
+
+        [HttpPut]
+        public async Task UpdateCustomerAsync([FromBody] CustomerInputModel model)
+        {
+            try
+            {
+                var result = await CustomerService.UpdateAsync(Mapper.Map<Customer>(model));
+
+                Ok();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        [HttpDelete("{id:int}")]
+        public async Task DeleteCustomerAsync(int id)
+        {
+            try
+            {
+                await CustomerService.DeleteAsync(id);
+                Ok();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Customer>> FindCustomerByIdAsync(int id)
         {
             try
             {
-                var result = await _customerService.FindByIdAsync(id);
+                var result = await CustomerService.FindByIdAsync(id);
                 if (result == null) return NotFound();
                 return result;
             }
@@ -61,11 +99,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
-
-
             try
             {
-                return Ok(await _customerService.GetAsyc());
+                return Ok(await CustomerService.GetAsyc());
             }
             catch (Exception)
             {
@@ -75,4 +111,12 @@ namespace WebAPI.Controllers
 
         }
     }
+    #endregion
+
+
+
+    
+
+
 }
+    

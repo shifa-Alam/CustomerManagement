@@ -51,8 +51,6 @@ namespace BAL
                 ApplyCountryIdBl(existingEntity);
                 ApplyValidationBl(existingEntity);
 
-                // chain effect
-
                 var result = await _appDbContext.SaveChangesAsync();
                 return entity;
 
@@ -65,8 +63,6 @@ namespace BAL
                 throw;
             }
         }
-
-
 
         public async Task DeleteAsync(int id)
         {

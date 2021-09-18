@@ -14,7 +14,6 @@ namespace BAL
         Task DeleteAsync(int id);
         Task<CustomerAddress> FindByIdAsync(int id);
         Task<IEnumerable<CustomerAddress>> GetAsyc();
-
-
+        //void OnCustomerDelete(Customer customer);
     }
 }

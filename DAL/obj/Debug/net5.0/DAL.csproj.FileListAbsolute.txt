@@ -34,7 +34,6 @@ D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.runtimeconfig.dev.j
 D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.dll
 D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\ref\DAL.dll
 D:\dotNetProject\CustomerManagement\DAL\bin\Debug\net5.0\DAL.pdb
-D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
 D:\dotNetProject\CustomerManagement\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs

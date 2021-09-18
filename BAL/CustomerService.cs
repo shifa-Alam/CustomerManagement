@@ -12,14 +12,14 @@ namespace BAL
    public  class CustomerService : ICustomerService
     {
         private readonly AppDbContext _appDbContext;
-        //private readonly ICustomerAddressService _customerAddressService;
+        private readonly ICustomerAddressService _customerAddressService;
 
-        public CustomerService(AppDbContext appDbContext)
+        public CustomerService(AppDbContext appDbContext, ICustomerAddressService customerAddressService)
         {
-            _appDbContext = appDbContext ?? throw new ArgumentNullException(nameof(appDbContext));
-            //_customerAddressService = customerAddressService ?? throw new ArgumentNullException(nameof(customerAddressService));
+            _appDbContext = appDbContext;
+            _customerAddressService = customerAddressService;
         }
-       
+
         public async Task<Customer> SaveAsync(Customer entity)
         {
 
@@ -85,6 +85,10 @@ namespace BAL
                 var result = _appDbContext.Customers.FirstOrDefault(c => c.Id == id);
                 if (result != null)
                 {
+                    foreach (var item in result.CustomerAddresses)
+                    {
+                        _appDbContext.CustomerAddresses.Remove(item);
+                    }
                     _appDbContext.Customers.Remove(result);
                     await _appDbContext.SaveChangesAsync();
                 }

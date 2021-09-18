@@ -33,14 +33,24 @@ namespace WebAPI
 
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+            
             services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ICustomerAddressService, CustomerAddressService>();
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).ConfigureApiBehaviorOptions(options =>{options.SuppressModelStateInvalidFilter = true;});
+
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperProfile());
+            });
+            var mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
+
             //services.AddControllers();
             services.AddControllers().AddNewtonsoftJson(options =>
-    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
@@ -68,7 +78,7 @@ namespace WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
-           
+
 
 
             app.UseHttpsRedirection();
@@ -77,7 +87,7 @@ namespace WebAPI
             app.UseCors();
 
             app.UseAuthorization();
-        
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

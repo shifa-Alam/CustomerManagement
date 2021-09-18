@@ -17,7 +17,7 @@ namespace DAL.Migrations
             modelBuilder
                 .HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.10")
+                .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("DAL.Country", b =>
@@ -100,6 +100,7 @@ namespace DAL.Migrations
                         .WithMany("Customers")
                         .HasForeignKey("CountryId")
                         .HasConstraintName("FK_Customer_Country")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Country");
@@ -111,6 +112,7 @@ namespace DAL.Migrations
                         .WithMany("CustomerAddresses")
                         .HasForeignKey("CustomerId")
                         .HasConstraintName("FK_CustomerAddress_Customer")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");

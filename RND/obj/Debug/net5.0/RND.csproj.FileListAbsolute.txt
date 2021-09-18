@@ -34,7 +34,6 @@ D:\dotNetProject\CustomerManagement\RND\bin\Debug\net5.0\RND.runtimeconfig.dev.j
 D:\dotNetProject\CustomerManagement\RND\bin\Debug\net5.0\RND.dll
 D:\dotNetProject\CustomerManagement\RND\bin\Debug\net5.0\ref\RND.dll
 D:\dotNetProject\CustomerManagement\RND\bin\Debug\net5.0\RND.pdb
-D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.csproj.AssemblyReference.cache
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.GeneratedMSBuildEditorConfig.editorconfig
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfoInputs.cache
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.AssemblyInfo.cs
@@ -43,3 +42,4 @@ D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.dll
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\ref\RND.dll
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.pdb
 D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.genruntimeconfig.cache
+D:\dotNetProject\CustomerManagement\RND\obj\Debug\net5.0\RND.csproj.AssemblyReference.cache
